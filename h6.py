@@ -10,10 +10,10 @@ list = soup.find_all(name="div", attrs={"class": "f-cat f-item"})
 for i in list:
     print('=====================================')
     # print(i)
-    for b in i.findAll("ul", {"class": "list underline"}): 
-        # print(b)
+    for b in i.findAll("ull", {"class": "list underline"}): 
+        #print(b)
         for link in b.findAll('a'):  
-            my_link = link.get('href')
+            my_link = link.get('href')+"\n"
             print(my_link)
             newLink = "www.milligazete.com.tr{}".format(my_link)
             print(newLink)  
@@ -30,7 +30,7 @@ def abc(sayfa_url):
 
 
     ]
-
-    for gun in link_listesi:
-        link_olusturucu(gun) 
+for gun in link_listesi:
+    link_olusturucu(gun) 
+        
         
